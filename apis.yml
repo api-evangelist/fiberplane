@@ -1,8 +1,20 @@
 aid: fiberplane
 name: Fiberplane
-description: 'Fiberplane is a company surfaced as a portfolio company of northzone and added to the API
-  Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: >-
+  Fiberplane is an Amsterdam-founded developer-tools company, backed by Northzone,
+  building agent-native tooling for the "software factory" era of AI coding agents.
+  Its current lineup centers on fp (fp.dev), a local-first CLI for tracking work
+  when coding with AI agents such as Claude Code; EV, an AI-powered code-review tool
+  that turns diffs into narratives; and DRIFT, an open-source tool that binds
+  specifications to code and lints for drift before stale docs reach production.
+  Fiberplane also maintains a Model Context Protocol (MCP) toolchain — mcp-lite (a
+  small, fetch-first SDK for building MCP servers), an MCP Gateway for intercepting
+  and debugging MCP servers, and a Console for reviewing and evaluating MCP servers.
+  Earlier work includes the Hono-native API Playground/Studio, the HONC.dev stack
+  (create-honc-app), @fiberplane/agents for introspecting Cloudflare Agents SDK apps,
+  and collaborative observability notebooks for incident response. The company ships
+  its libraries on npm under the @fiberplane scope and distributes its CLI binaries
+  via a Homebrew tap and an install script.
 url: https://raw.githubusercontent.com/api-evangelist/fiberplane/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +22,34 @@ x-backed-by:
 - northzone
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/61152955?s=200&v=4
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
+- Developer Tools
+- Agents
+- MCP
+- Model Context Protocol
+- Developer Experience
+- CLI
+- Observability
+- TypeScript
+- Hono
+- AI Coding
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +58,33 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://fiberplane.dev
+  url: https://fiberplane.com
+- type: Documentation
+  url: https://docs.fiberplane.com
+- type: GettingStarted
+  url: https://fp.dev
+- type: Blog
+  url: https://blog.fiberplane.com/blog/
+- type: GitHubOrganization
+  url: https://github.com/fiberplane
+- type: Support
+  url: https://discord.com/invite/9xHGYRgsFV
+- type: TermsOfService
+  url: https://fiberplane.com/terms
+- type: PrivacyPolicy
+  url: https://fiberplane.com/privacy
+- type: LLMsTxt
+  url: llms/fiberplane-llms.txt
+- type: Packages
+  url: packages/fiberplane-packages.yml
+- type: SDKs
+  url: packages/fiberplane-packages.yml
+- type: CLI
+  url: cli/fiberplane-cli.yml
+- type: DomainSecurity
+  url: security/fiberplane-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

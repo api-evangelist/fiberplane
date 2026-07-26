@@ -1,0 +1,48 @@
+generated: '2026-07-19'
+method: searched
+source: https://fp.dev/llms.txt + https://docs.fiberplane.com
+clis:
+  - name: fp
+    summary: Local-first CLI for tracking work when coding with AI agents (especially Claude Code).
+    homepage: https://fp.dev
+    docs: https://docs.fiberplane.com
+    repository: https://github.com/fiberplane/fp
+    install:
+      - method: script
+        command: "curl -fsSL https://setup.fp.dev/install.sh | sh -s"
+      - method: homebrew
+        command: "brew install fiberplane/tap/fp"
+    storage: "Local SQLite in ~/.fiberplane/projects/<storage-dir>/; project registry in ~/.fiberplane/projects.toml. No external service, no MCP server required."
+    commands:
+      - name: fp init
+        description: Register the project, scaffold .fp/, prompt for agent instruction setup, and seed onboarding issues on the first project.
+        flags: ["--agent claude|standard|codex|skip"]
+      - name: fp agent setup <claude|standard|codex>
+        description: Add or refresh agent instruction files in an already-initialized project (idempotent).
+      - name: fp guide [plan|implement|brainstorm|extension]
+        description: Print bundled workflow primers; supports --references <name>.
+      - name: fp update
+        description: Install the latest stable release (--latest for prereleases).
+      - name: fp issue create --title "..."
+        description: Create a new issue.
+      - name: fp issue list [--status todo]
+        description: List issues with optional filters.
+      - name: fp tree
+        description: View the issue hierarchy as an ASCII tree.
+      - name: fp context <id>
+        description: Output issue context for agent consumption.
+      - name: fp run <id>
+        description: Dispatch Claude to work on an issue.
+      - name: fp comment <id> "message"
+        description: Add a progress comment to an issue.
+    agent_integration:
+      - "fp init --agent standard writes FP_AGENTS.md and ensures AGENTS.md @-includes it."
+      - "fp init --agent claude writes FP_CLAUDE.md / CLAUDE.md for Claude Code."
+  - name: drift
+    summary: Bind specs to code and check for drift; lints for inconsistencies between specifications and implementation.
+    repository: https://github.com/fiberplane/drift
+    language: zig
+    license: MIT
+    install:
+      - method: homebrew
+        command: "brew install fiberplane/tap/drift"

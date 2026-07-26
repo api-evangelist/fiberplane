@@ -1,0 +1,79 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.npmjs.com/org/fiberplane + https://github.com/fiberplane
+packages:
+  - language: javascript
+    registry: npm
+    name: mcp-lite
+    version: 0.10.0
+    url: https://www.npmjs.com/package/mcp-lite
+    install: npm install mcp-lite
+    description: A small, fetch-first implementation of the Model Context Protocol (MCP) server APIs.
+    repository: https://github.com/fiberplane/mcp-lite
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fiberplane/agents"
+    version: 0.5.3
+    url: https://www.npmjs.com/package/@fiberplane/agents
+    install: npm install @fiberplane/agents
+    description: A toolkit for introspecting and debugging agents built with Cloudflare's Agents SDK.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fiberplane/hono-otel"
+    version: 0.8.0
+    url: https://www.npmjs.com/package/@fiberplane/hono-otel
+    install: npm install @fiberplane/hono-otel
+    description: Hono middleware to forward OpenTelemetry traces to a local Fiberplane instance.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fiberplane/hono"
+    version: 0.5.5
+    url: https://www.npmjs.com/package/@fiberplane/hono
+    install: npm install @fiberplane/hono
+    description: Hono-native API Playground / embedded explorer powered by OpenAPI.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fiberplane/embedded"
+    version: 0.0.30
+    url: https://www.npmjs.com/package/@fiberplane/embedded
+    install: npm install @fiberplane/embedded
+    description: Embeddable Fiberplane API Playground surface.
+    official: true
+  - language: javascript
+    registry: npm
+    name: "@fiberplane/studio"
+    version: 0.14.0
+    url: https://www.npmjs.com/package/@fiberplane/studio
+    install: npm install @fiberplane/studio
+    description: Local development debugging interface for Hono apps.
+    official: true
+  - language: javascript
+    registry: npm
+    name: create-honc-app
+    version: 1.6.1
+    url: https://www.npmjs.com/package/create-honc-app
+    install: npm create honc-app@latest
+    description: An interactive CLI to create modular typesafe data APIs using TypeScript (HONC stack).
+    repository: https://github.com/fiberplane/create-honc-app
+    official: true
+  - language: binary
+    registry: homebrew
+    name: fp
+    url: https://github.com/fiberplane/homebrew-tap
+    install: brew install fiberplane/tap/fp
+    alt_install: curl -fsSL https://setup.fp.dev/install.sh | sh -s
+    description: Local-first CLI for tracking work when coding with AI agents (fp.dev).
+    repository: https://github.com/fiberplane/fp
+    official: true
+  - language: binary
+    registry: homebrew
+    name: drift
+    url: https://github.com/fiberplane/homebrew-tap
+    install: brew install fiberplane/tap/drift
+    description: Bind specs to code and check for drift (Zig, MIT).
+    repository: https://github.com/fiberplane/drift
+    official: true
